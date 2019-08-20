@@ -9,7 +9,7 @@
 	<body>
 	<?php
 		
-		include("classePessoa.php");
+		include("classeProdutoPerecivel.php");
 		session_start();
 		include("cabecalho.php");
 		
@@ -18,15 +18,15 @@
 		<thead>
 			<tr>
 				<th>Nome</th>
-				<th>Email</th>
-				<th>CPF</th>
-				<th>Sexo</th>
-				<th>Data Nascimento</th>
+				<th>Descrição</th>
+				<th>Preço</th>
+				<th>Unidade</th>
+                <th>Data de Validade</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php
-				foreach($_SESSION["pessoa"] as $i=>$p){
+				foreach($_SESSION["produtop"] as $i=>$p){
 					$p->exibe_tr();
 				}
 			?>

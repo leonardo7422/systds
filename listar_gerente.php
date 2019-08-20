@@ -9,7 +9,7 @@
 	<body>
 	<?php
 		
-		include("classePessoa.php");
+		include("classeGerente.php");
 		session_start();
 		include("cabecalho.php");
 		
@@ -17,17 +17,22 @@
 	<table border='1'>
 		<thead>
 			<tr>
+				<th>CPF</th>
 				<th>Nome</th>
 				<th>Email</th>
-				<th>CPF</th>
-				<th>Sexo</th>
-				<th>Data Nascimento</th>
+				<th>Data de Nascimento</th>
+				<th>Área</th>
+				<th>Salário</th>
+				<th>Endereço</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>País</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php
-				foreach($_SESSION["pessoa"] as $i=>$p){
-					$p->exibe_tr();
+				foreach($_SESSION["gerente"] as $i=>$g){
+					$g->exibe_tr();
 				}
 			?>
 		</tbody>
